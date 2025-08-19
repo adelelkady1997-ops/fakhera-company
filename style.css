@@ -1,0 +1,192 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('https://i.ibb.co/cSSDKWDn/Chat-GPT-Image-14-2025-10-25-57.png') no-repeat center center/cover;
+  color: #fff;
+  direction: rtl;
+  overflow-x: hidden;
+  animation: floatPage 6s ease-in-out infinite;
+}
+
+/* ====== أيقونات طائرة ====== */
+.floating-icons {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.floating-icons i {
+  position: absolute;
+  font-size: 26px;
+  color: rgba(255, 255, 255, 0.4);
+  animation: floatIcons 12s linear infinite, fadeIcons 8s ease-in-out infinite;
+}
+
+/* مواقع مختلفة للأيقونات */
+.floating-icons i:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+.floating-icons i:nth-child(2) { top: 30%; left: 80%; animation-delay: 2s; }
+.floating-icons i:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; }
+.floating-icons i:nth-child(4) { top: 75%; left: 50%; animation-delay: 6s; }
+.floating-icons i:nth-child(5) { top: 20%; left: 60%; animation-delay: 8s; }
+.floating-icons i:nth-child(6) { top: 40%; left: 30%; animation-delay: 3s; }
+.floating-icons i:nth-child(7) { top: 55%; left: 70%; animation-delay: 5s; }
+.floating-icons i:nth-child(8) { top: 80%; left: 20%; animation-delay: 7s; }
+.floating-icons i:nth-child(9) { top: 15%; left: 90%; animation-delay: 9s; }
+.floating-icons i:nth-child(10) { top: 50%; left: 40%; animation-delay: 11s; }
+
+/* ====== الهيدر ====== */
+.header {
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: inline-block;
+  background-color: white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.logo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #FFD700;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* ====== التعريف ====== */
+.about {
+  text-align: center;
+  margin: 25px auto;
+  max-width: 850px;
+}
+
+.about h2 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.about-en {
+  font-weight: normal;
+  font-size: 18px;
+  direction: ltr;
+  text-align: center;
+}
+
+/* ====== أيقونة العلم ====== */
+.flag {
+  width: 20px;
+  height: auto;
+  vertical-align: middle;
+}
+
+.with-flag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ====== صورة أساسية ====== */
+.main-image {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.main-image img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* ====== واتساب ====== */
+.whatsapp {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.whatsapp a {
+  background-color: #25D366;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: 0.3s;
+}
+
+.whatsapp a:hover {
+  background-color: #20b954;
+  transform: scale(1.05);
+}
+
+/* ====== الحركات ====== */
+.fade-in { animation: fadeIn 2s ease-in-out; }
+.slide-up { animation: slideUp 2s ease-in-out; }
+.zoom-in { animation: zoomIn 2s ease-in-out; }
+.bounce-in { animation: bounceIn 2s ease-in-out; }
+.fade-in-text { animation: fadeInOut 5s ease-in-out infinite; }
+
+/* حركة للصفحة */
+@keyframes floatPage {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(-15px); opacity: 0.9; }
+}
+
+/* حركة للأيقونات */
+@keyframes floatIcons {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(20deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+@keyframes fadeIcons {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.7; }
+}
+
+/* نصوص تظهر وتختفي */
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* ====== Keyframes للنصوص ====== */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes zoomIn { from { transform: scale(0.7); opacity: 0; } to { transform: scale(1); opacity: 1;} }
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.2); opacity: 1; }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
